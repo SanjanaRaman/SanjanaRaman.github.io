@@ -1,38 +1,394 @@
-.App {
+@font-face {font-family: "Menlo"; src: url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.eot"); src: url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.woff") format("woff"), url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9f94dc20bb2a09c15241d3a880b7ad01.svg#Menlo") format("svg"); }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Quicksand:wght@300;700&display=swap');
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  width: 100vw;
+  max-width:100%;
+}
+.navbar a {
+  font-size: 100%;
+}
+
+.navbar > .active {
+    border-bottom: 1px solid black;
+}
+@media (max-width: 899px) {
+  .main-section {
+    height:10vh;
+    width: 100vw;
+    max-width:100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main-header {
+    font-family: 'Menlo';
+    font-size: 9.5vw;
+    text-align: center;
+    cursor: pointer;
+    line-height: 150%;
+  }
+
+
+  .about-section {
+    height:90%;
+    width: 100vw;
+    max-width:100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  .about-info {
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 80%;
+    max-height: 80%;
+  }
+
+  .about-info h2 {
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5vh;
+    padding-bottom: 10%;
+    align-self: center;
+    font-weight: normal;
+  }
+
+  .about-image {
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
+    text-align: center;
+  }
+  .about-image img {
+    width: 70%;
+    height: auto;
+    align-self: center;
+  }
+  .email {
+    background-color: black;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Quicksand', sans-serif;
+    font-size:0.6em;
+    color: white;
+  }
+
+  .email a {
+    background-color: black;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: 'Quicksand', sans-serif;
+    font-size:0.8em;
+    color: white;
+    text-decoration: underline;
+  }
+
+  .email a:hover {
+    font-size:0.8em;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .main-header {
+    font-family: 'Menlo';
+    font-size: 6vw;
+    text-align: center;
+    cursor: pointer;
+    line-height: 150%;
+  }
+
+  .about-section {
+    height:50%;
+    width: 100vw;
+    max-width:100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  .about-info {
+    text-align: center;
+    background-color: white;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    justify-content: center;
+    display: flex;
+    height: 80%;
+    max-height: 80%;
+  }
+
+  .about-info h2 {
+    background-color: white;
+    margin-left: 5%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8vw;
+    align-self: center;
+    font-weight: normal;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
+  }
+  .about-image img {
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+  }
+
+  .email {
+    background-color: black;
+    padding-bottom: 5%;
+    font-family: 'Quicksand', sans-serif;
+    font-size:1.8vw;
+    color: white;
+  }
+
+  .email a {
+    background-color: black;
+    padding-bottom: 5%;
+    font-family: 'Quicksand', sans-serif;
+    font-size:1.8vw;
+    color: white;
+    text-decoration: underline;
+  }
+
+  .email a:hover {
+    font-size:2vw;
+  }
+}
+
+.main-section {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+.project-top {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25em;
+
+}
+
+.project-header {
+  font-size: 2em;
+  width: 100%;
+  height: 10%;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  text-align: center;
+  justify: top;
+  color: white;
+  font-family: 'Menlo';
+}
+
+
+.skills {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.project-tabs {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+}
+.projects-section {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+  overflow: hidden;
+}
+.skills-section {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+.skills-header {
+  padding-top: 5%;
+  font-size: 3.5em;
+  text-align: center;
+  color: black;
+  font-family: 'Menlo';
+}
+
+.skills1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  width: 50%;
+  text-align: right;
+  padding-right: 2%;
+  padding-top: 7%;
+  line-height: 180%;
+}
+
+
+.stars1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.5em;
+  width: 50%;
+  padding-left: 2%;
+  padding-top: 7%;
+  line-height: 180%;
+
+}
+
+h2{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.contact {
+  height:100vh;
+  width: 100vw;
+  max-width:100%;
+
+  background-color: black;
+  font-family: 'Quicksand', sans-serif;
+  font-size:2em;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.headers {
+  padding-top: 5%;
+  font-size: 1.8em;
+  text-align: center;
+  color: white;
+  font-family: 'Menlo';
+  background-color: black;
+}
+.contact-section {
+  height: 50%;
+  background-color: black;
+  display: flex;
+}
+
+.logos {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.logos img {
+  margin: 5%;
+  width: 15%;
+  height: auto;
+}
+
+.logos img:hover {
+  margin: 5%;
+  width: 15%;
+  height: auto;
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.logosmobile {
+  width: 100%;
+  height: 70%;
+  justify-content: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logosmobile img {
+  margin: 1%;
+  height: 25%;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logosmobile img:hover {
+  margin: 1%;
+  height: 25%;
+  width: auto;
+  border-color: white;
+  -webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+h1 {
+  margin-block-start: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation:
+    typing 2s steps(70, end),
+    blink-caret .75s step-end infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbartest {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  transition: top 0.6s;
+  z-index: 3;
+}
+
+.navbartest--appear {
+  top: -50px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
